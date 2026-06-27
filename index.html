@@ -15,54 +15,71 @@
       <span class="v">vcr</span>
     </header>
 
-    <p class="tagline">Code on your Mac.<br/>From the couch. From the train. From anywhere.</p>
-    <p class="sub">A focused iPhone terminal that pairs with a tiny Mac server. Drive <code>claude</code>, <code>codex</code>, or a shell session — full color, full history, no SSH gymnastics.</p>
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <p class="tagline">Code on your Mac.<br/>From the couch. From the train. From anywhere.</p>
+        <p class="sub">A focused iPhone terminal that pairs with a tiny Mac server. Drive <code>claude</code>, <code>codex</code>, or a shell session — full color, full history, no SSH gymnastics.</p>
 
-    <div class="row">
-      <a class="cta" href="#download">Download Mac Server</a>
-      <a class="cta secondary" href="#appstore">Get the iOS app</a>
+        <div class="row">
+          <a class="cta" href="#download">Download Mac Server</a>
+          <a class="cta secondary" href="#appstore">Get the iOS app</a>
+        </div>
+      </div>
+
+      <figure class="hero-shot">
+        <img src="assets/theme-store.jpg" alt="Vibe Code Remote theme store on iPhone" />
+        <figcaption>TERMINAL is free. Pro Bundle unlocks every visual theme.</figcaption>
+      </figure>
     </div>
 
-    <figure class="hero-shot">
-      <img src="assets/theme-store.jpg" alt="Vibe Code Remote theme store on iPhone" />
-      <figcaption>TERMINAL is free. Pro Bundle unlocks every visual theme.</figcaption>
-    </figure>
+    <div class="panel-grid">
+      <section id="how" class="panel wide">
+        <h2>How it works</h2>
+        <ul class="bare">
+          <li><span class="k">Server</span> Run the Mac menu-bar app. It exposes a local WebSocket endpoint.</li>
+          <li><span class="k">iOS</span> Open the app, scan the pairing QR, hit GO LIVE.</li>
+          <li><span class="k">Sessions</span> Sessions stay alive while the server daemon runs. Scrollback is restored after restart.</li>
+          <li><span class="k">Themes</span> TERMINAL is free. One Pro Bundle unlocks CYBERDECK, MIDNIGHT, AMBER, MATRIX, NEON, and future Pro themes.</li>
+        </ul>
+      </section>
 
-    <section id="how">
-      <h2>How it works</h2>
-      <ul class="bare">
-        <li><span class="k">Server</span> Run the Mac menu-bar app. It exposes a local WebSocket endpoint.</li>
-        <li><span class="k">iOS</span> Open the app, scan the pairing QR, hit GO LIVE.</li>
-        <li><span class="k">Sessions</span> Sessions stay alive while the server daemon runs. Scrollback is restored after restart.</li>
-        <li><span class="k">Themes</span> TERMINAL is free. One Pro Bundle unlocks CYBERDECK, MIDNIGHT, AMBER, MATRIX, NEON, and future Pro themes.</li>
-      </ul>
-    </section>
+      <section id="download" class="panel">
+        <h2>Server — Free Download</h2>
+        <p>Run the Mac menu-bar app, then scan its pairing QR from iOS.</p>
+        <div class="row">
+          <a class="cta" href="https://github.com/zzh412/vibe-code-remote-site/releases/latest/download/VibeCodeServer.dmg">macOS · Universal · DMG</a>
+        </div>
+        <p class="sub compact">Requires macOS 12+. Windows is not supported in this launch. If Gatekeeper blocks first launch, right-click the app and choose Open.</p>
+      </section>
 
-    <section id="download">
-      <h2>Server — Free Download</h2>
-      <p>Run the Mac menu-bar app, then scan its pairing QR from iOS.</p>
-      <div class="row">
-        <a class="cta" href="https://github.com/zzh412/vibe-code-remote-site/releases/latest/download/VibeCodeServer.dmg">macOS · Universal · DMG</a>
-      </div>
-      <p class="sub" style="margin-top:16px;">Requires macOS 12+ for the Mac server. Windows is not supported in this launch. If Gatekeeper blocks first launch, right-click the app and choose Open.</p>
-    </section>
+      <section id="appstore" class="panel">
+        <h2>iOS App</h2>
+        <p>Available on the App Store soon. The TERMINAL theme and demo mode are free, so you can try the app before buying the optional Pro Themes Bundle.</p>
+        <p class="sub compact">If you're a beta tester with a TestFlight invite, check the email we sent.</p>
+      </section>
 
-    <section id="appstore">
-      <h2>iOS App</h2>
-      <p>Available on the App Store soon. The TERMINAL theme and demo mode are free, so you can try the app before buying the optional Pro Themes Bundle.</p>
-      <p class="sub">If you're a beta tester with a TestFlight invite, check the email we sent.</p>
-    </section>
+      <section id="support" class="panel">
+        <h2>Support</h2>
+        <p>Email <a href="mailto:thezhuangpark@outlook.com">thezhuangpark@outlook.com</a> for setup help, purchase issues, or bug reports.</p>
+      </section>
+    </div>
 
-    <section id="faq">
+    <section id="faq" class="dense">
       <h2>FAQ</h2>
-      <h3>Does this go through a relay server?</h3>
-      <p>On LAN/Tailscale/VPN, connections go directly from your iPhone to your machine. You can also enable a Cloudflare Quick Tunnel yourself for public wss:// access. We do not operate a relay.</p>
-
-      <h3>Why not just SSH?</h3>
-      <p>You can. SSH on a phone with a soft keyboard is rough — we wanted something that feels like an editor, not a terminal emulator pretending to be one. Sessions persist. Resize is sane. Demo mode lets you try before connecting.</p>
-
-      <h3>Can I get a refund?</h3>
-      <p>Apple handles all IAP refunds. Tap <em>Report a Problem</em> in the App Store on the receipt within 90 days.</p>
+      <div class="faq-grid">
+        <article>
+          <h3>Does this go through a relay server?</h3>
+          <p>On LAN/Tailscale/VPN, connections go directly from your iPhone to your machine. You can also enable a Cloudflare Quick Tunnel yourself for public wss:// access. We do not operate a relay.</p>
+        </article>
+        <article>
+          <h3>Why not just SSH?</h3>
+          <p>You can. SSH on a phone with a soft keyboard is rough — we wanted something that feels like an editor, not a terminal emulator pretending to be one. Sessions persist. Resize is sane. Demo mode lets you try before connecting.</p>
+        </article>
+        <article>
+          <h3>Can I get a refund?</h3>
+          <p>Apple handles all IAP refunds. Tap <em>Report a Problem</em> in the App Store on the receipt within 90 days.</p>
+        </article>
+      </div>
     </section>
 
     <section id="languages">
@@ -98,11 +115,6 @@
           <p>Vibe Code Remote è un terminale per iPhone che si collega al tuo server Mac. Abbina con un codice QR e controlla shell, Claude Code, Codex e attività di sviluppo lunghe direttamente dal telefono.</p>
         </article>
       </div>
-    </section>
-
-    <section id="support">
-      <h2>Support</h2>
-      <p>Email <a href="mailto:thezhuangpark@outlook.com">thezhuangpark@outlook.com</a> for setup help, purchase issues, or bug reports.</p>
     </section>
 
     <footer>

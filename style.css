@@ -24,7 +24,7 @@ html, body {
 a { color: var(--accent); text-decoration: none; border-bottom: 1px dotted var(--accent-dim); }
 a:hover { color: #fff; border-bottom-color: #fff; }
 
-main { max-width: 720px; margin: 0 auto; padding: 64px 24px 96px; }
+main { max-width: 1120px; margin: 0 auto; padding: 56px 28px 80px; }
 
 header.brand {
   display: flex;
@@ -49,6 +49,7 @@ header.brand .v { color: var(--muted); font-size: 12px; letter-spacing: 0.18em; 
   letter-spacing: -0.01em;
 }
 .sub { color: var(--muted); margin: 0 0 40px; }
+.sub.compact { margin: 16px 0 0; }
 
 section { margin: 40px 0; padding-top: 24px; border-top: 1px solid var(--rule); }
 section h2 {
@@ -75,14 +76,27 @@ section h2 {
 
 .row { display: flex; gap: 12px; flex-wrap: wrap; }
 
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 360px);
+  gap: 56px;
+  align-items: start;
+  margin-top: 28px;
+}
+
+.hero-copy {
+  padding-top: 10px;
+}
+
 .hero-shot {
-  margin: 42px 0 18px;
+  margin: 0;
   display: grid;
   gap: 10px;
+  justify-items: end;
 }
 
 .hero-shot img {
-  width: min(100%, 420px);
+  width: min(100%, 360px);
   border: 1px solid var(--rule);
   border-radius: 10px;
   display: block;
@@ -92,6 +106,40 @@ section h2 {
 .hero-shot figcaption {
   color: var(--muted);
   font-size: 12px;
+  max-width: 360px;
+}
+
+.panel-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(260px, 0.85fr);
+  gap: 18px;
+  margin-top: 38px;
+}
+
+.panel-grid section,
+section.dense {
+  margin: 0;
+}
+
+.panel {
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.015);
+}
+
+.panel.wide {
+  grid-row: span 3;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.faq-grid h3 {
+  margin-top: 0;
 }
 
 ul.bare { list-style: none; padding: 0; margin: 0; }
@@ -129,7 +177,7 @@ h3 { font-size: 16px; margin: 28px 0 8px; letter-spacing: 0.04em; }
 
 .locale-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 14px;
 }
 
@@ -156,4 +204,16 @@ h3 { font-size: 16px; margin: 28px 0 8px; letter-spacing: 0.04em; }
   color: var(--fg);
   background: rgba(240, 179, 74, 0.06);
   margin: 16px 0;
+}
+
+@media (max-width: 760px) {
+  main { padding: 36px 18px 64px; }
+  .hero-grid,
+  .panel-grid,
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero-shot {
+    justify-items: start;
+  }
 }
