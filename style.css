@@ -78,35 +78,12 @@ section h2 {
 
 .hero-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(260px, 360px);
-  gap: 56px;
-  align-items: start;
   margin-top: 28px;
+  max-width: 820px;
 }
 
 .hero-copy {
   padding-top: 10px;
-}
-
-.hero-shot {
-  margin: 0;
-  display: grid;
-  gap: 10px;
-  justify-items: end;
-}
-
-.hero-shot img {
-  width: min(100%, 360px);
-  border: 1px solid var(--rule);
-  border-radius: 10px;
-  display: block;
-  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.35);
-}
-
-.hero-shot figcaption {
-  color: var(--muted);
-  font-size: 12px;
-  max-width: 360px;
 }
 
 .panel-grid {
